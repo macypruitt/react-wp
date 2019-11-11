@@ -3,7 +3,7 @@ let albums =[
         id: 1,
         name: 'ADHD 2',
         imageUrl: '/AlbumArt/alb_art_adhd2.jpg',
-        bandcampLink: ''
+        bandcampLink: `<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=3045255611/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="http://leonarddstroy.bandcamp.com/album/adhd-vol-2">ADHD Vol.2 by Leonard Dstroy</a></iframe>`
     },
     {
         id: 2,
