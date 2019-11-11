@@ -1,27 +1,23 @@
-.App {
-  text-align: center;
+/* Layout page styling */
+.layout-container{
+    height:100%
+}
+.main-div {
+    background-color: green;
+    display: flex;
+    padding: 20px;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
+.main-left{
+    flex: 70%
+}
+.main-right{
+    flex: 30%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
-
-.header {
-  width: 100%;
-  background-color: blue;
+/* Discography section */
+.album-img {
+    width: 40%;
+    max-width: 300px;
 }
