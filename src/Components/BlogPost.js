@@ -9,9 +9,10 @@ export default class BlogPost extends React.Component {
         
     return (
      <div className="blog-post">            
-        <h2>{this.props.item.title.rendered} </h2>
+        
+        <h2 dangerouslySetInnerHTML={{__html: this.props.item.title.rendered}}></h2>
         <div dangerouslySetInnerHTML={{__html: this.props.item.content.rendered}}></div>
-        <div>{this.props.item.date} </div> 
+        <div>Posted on {this.props.item.date} </div> 
      </div>
     )
   }

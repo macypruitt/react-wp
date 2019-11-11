@@ -15,14 +15,15 @@ class Layout extends Component {
           this.props.dispatch({
               type: 'SET_ALBUM',
               payload: {
-                yeah: 'boy',
                 view: 'blog'
               }
         })
     }
     render(){
 
-        let leftSideContent = <Blog />;
+        let leftSideContent = <Blog/>
+        console.log('redddduz', this.props.store.activeAlbumReducer)
+
 
         if(this.props.store.activeAlbumReducer.view != 'blog'){
           leftSideContent = <AlbumDetails/>

@@ -18,20 +18,15 @@ export default class Blog extends React.Component {
     }
 
     render(){
-
         
-            const postsDetails = this.state.posts;
+            let postsDetails = this.state.posts;
+            
 
             let contentMapped = postsDetails.map((item, index) => {
-
                 return ( 
                     <BlogPost item={item}/>  
                 )
-
              })
-
-       
-        
 
         return (
             <div className="blogContainer">

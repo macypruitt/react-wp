@@ -4,16 +4,15 @@ import {connect} from 'react-redux';
 
  class Discography extends Component {
 
-  clickAlbum = (event, item) => {
-    console.log('sfsdfsdfs', item)
-    this.props.dispatch({
-      type: 'SET_ALBUM',
-      payload: {
-        view: 'album',
-        item
-      }
-    })
-  }
+    clickAlbum = (event, item) => {
+        this.props.dispatch({
+            type: 'SET_ALBUM',
+            payload: {
+              view: 'album',
+              item
+            }
+        })
+    }
   
   
 
@@ -25,26 +24,35 @@ import {connect} from 'react-redux';
       if(albums){
 
           albumsArray = albums.map((item, index) => {
-              return (<div className="album-container" key={index}>
+              return (
                   
-                  <img className="album-img" data={item}
-                    src={item.imageUrl}
-                    onClick={(event)=>this.clickAlbum(event, item)}></img>
-                  <br></br>
-                  {item.name}
-                  <br></br>
-              </div>
+                  <div className="album-container" key={index}>
+                  
+                      <img className="album-img" data={item}
+                        src={item.imageUrl}
+                        onClick={(event)=>this.clickAlbum(event, item)}></img>
+
+                      <br></br>
+                      {item.name}
+                      <br></br>
+                      
+                  </div>
               )
 
           })
       }
 
     return (
-     <div className="discog-container">
-         <h3>RELEASES</h3>
+      <div className="discog-container">
+          
+          <div className="discog-albums">
+          
+         <br/>
          {albumsArray}
          
      </div>
+      </div>
+    
     )
   }
 }
