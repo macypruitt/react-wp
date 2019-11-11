@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 import Blog from './Blog';
 import Footer from './Footer';
 import Discography from './Discography';
+import {connect} from 'react-redux';
 
 import '../App.css'
 
-export default class Layout extends React.Component {
+class Layout extends Component {
   state = {
     posts: []
   }
+
+    componentDidMount(){
+      console.log(`yaay`);
+      this.props.dispatch({
+        type: 'SET_ALBUM',
+        payload: {
+          yeah: 'boy'
+        }
+      })
+    }
     render(){
     return (
         <div className="layout-container">
@@ -32,3 +43,9 @@ export default class Layout extends React.Component {
     )
   }
 }
+
+const mapStoreToProps = (store) => ({
+  store
+})
+
+export default connect(mapStoreToProps)(Layout);

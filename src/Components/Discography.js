@@ -13,9 +13,12 @@ export default class Discography extends React.Component {
       if(albums){
 
           albumsArray = albums.map((item, index) => {
-              return (<div key={index}>
-                  {item.id}
+              return (<div className="album-container" key={index}>
+                  
                   <img className="album-img" src={item.imageUrl}></img>
+                  <br></br>
+                  {item.name}
+                  <br></br>
               </div>
               )
 
@@ -23,9 +26,10 @@ export default class Discography extends React.Component {
       }
 
     return (
-     <div>
-         sdfsdfsd
+     <div className="discog-container">
+         <h3>RELEASES</h3>
          {albumsArray}
+         
      </div>
     )
   }

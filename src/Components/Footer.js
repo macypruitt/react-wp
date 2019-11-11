@@ -18,7 +18,7 @@ export default class Header extends React.Component {
             padding: '0px',
             float: 'bottom',
             background: 'black',
-            position:'absolute',
+            
             bottom:'0',
            
             height:'60px',

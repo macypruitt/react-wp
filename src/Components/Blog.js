@@ -19,32 +19,22 @@ export default class Blog extends React.Component {
 
     render(){
 
-        let renderThis = 'yay';
-        let contentMapped;
-        let postsDetails;
+        
+            const postsDetails = this.state.posts;
 
-         if( this.state.posts.length > 0){
-            postsDetails = this.state.posts
+            let contentMapped = postsDetails.map((item, index) => {
 
-             contentMapped = postsDetails.map((item, index) => {
                 return ( 
-                   <div>              
-                    <div>{item.title.rendered} </div>
-                    <div>{item.content.rendered} </div>
-                    <div>{item.date} </div>
-                   </div>     
-                 )
-             })
-        }
-        console.log('contennnnnt is', contentMapped);
-        console.log('postsDetails is', postsDetails);
+                    <BlogPost item={item}/>  
+                )
 
-        const blogStyles = {
-           
-        }
+             })
+
+       
+        
 
         return (
-            <div className="blogContainer" style={blogStyles}>
+            <div className="blogContainer">
                 {contentMapped}
             </div>
         )
