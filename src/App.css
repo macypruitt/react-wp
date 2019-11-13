@@ -12,9 +12,9 @@
 }
 
 .main-left{
-    flex: 70%;
+    flex: 68%;
     text-align: center;
-    overflow: auto;
+    overflow: none;
 }
 .main-right{
     text-align: center;
@@ -76,7 +76,20 @@
 }
 
 .header-nav{
-  
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.header-icons{
+    display: inline-block;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+
+.icon {
+    width: 30px;
+    margin: 3px;
 }
 
 /* AlbumDetails page */
@@ -106,4 +119,18 @@
         .main-div {
             width: 90%;
         }
+
+        .icon {
+            width: 50px;
+            margin: 3px;
+        }
+    }
+
+    .wp-block-embed-youtube{
+        width: 100%;
+    }
+
+    /* iframes are used in YouTube videos */
+    iframe{
+        width:80%;
     }

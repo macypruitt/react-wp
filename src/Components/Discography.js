@@ -46,7 +46,6 @@ import {connect} from 'react-redux';
       <div className="discog-container">
           
           <div className="discog-albums">
-          
          <br/>
          {albumsArray}
          
