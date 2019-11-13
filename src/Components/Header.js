@@ -27,18 +27,19 @@ class Header extends Component {
     return (
             <div className="page-header">
                 <div className="header-contents">
-                  ljk
-                    {/* <img src={dstroySignature} className="logo" onClick={this.clickLogo}></img> */}
+                  
+                    <img src={dstroySignature} className="logo" onClick={this.clickLogo}></img>
                 </div>
 
                 <div className="header-nav">
                     <div className="header-icons">
-                        <img src={emailIcon} className="icon"></img>
-                        <img src={fbIcon} className="icon"></img>
-                        <img src={igIcon} className="icon"></img>
-                        <img src={scIcon} className="icon"></img>
-                        <img src={twitIcon} className="icon"></img>
-                        <img src={ytIcon} className="icon"></img>
+                        
+                        {/* <a href="https://www.facebook.com/LeonardDstroyMusic/"><img src={fbIcon} className="icon"></img> </a> */}
+                        <a href="https://www.instagram.com/leonarddstroy/"><img src={igIcon} className="icon"></img></a>
+                        <a href="https://soundcloud.com/leonarddstroymusic"><img src={scIcon} className="icon"></img></a>
+                        <a href="https://twitter.com/leonarddstroy?lang=en"><img src={twitIcon} className="icon"></img></a>
+                        <a href="mailto:leonarddstroy@gmail.com"><img src={emailIcon} className="icon"></img></a>
+                        {/* <img src={ytIcon} className="icon"></img> */}
                     </div>
 
                     <span className="header-text"></span>

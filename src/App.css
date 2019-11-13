@@ -65,9 +65,14 @@
     align-content: center;
 }
 
+.header-contents{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
 .logo{
     display: inline-block;
-    height: 150px;
+    height: 100px;
     margin: 10px;
 }
 
