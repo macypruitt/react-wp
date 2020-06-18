@@ -2,37 +2,34 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import ReactHtmlParser from 'react-html-parser';
 import '../App.css'
-import albums from '../DiscogData/albums';
 
 class AlbumDetails extends Component {
  
-    
     render(){
-
-        let iFrame;
-
+        let bandcampPlayer;
         let albumDescription;
         
-        if(this.props.store.activeAlbumReducer.item != undefined){
-            iFrame = this.props.store.activeAlbumReducer.item.bandcampLink;
-            albumDescription = this.props.store.activeAlbumReducer.item.blurb;
-
+        if(this.props.activeAlbum){
+            bandcampPlayer = this.props.activeAlbum.bandcampLink;
+            albumDescription = this.props.activeAlbum.blurb;
         }
-
 
     return (
         <div className="album-details-container">
-            {ReactHtmlParser(albumDescription)}
+
+            { ReactHtmlParser(albumDescription) }
+
             <div className="bandcamp-player">
-                 {ReactHtmlParser(iFrame)}
+                 { ReactHtmlParser(bandcampPlayer) }
             </div>
+
         </div>
     )
   }
 }
 
-const mapStoreToProps = (store) => ({
-  store
-})
+const mapStoreToProps = (state) => {
+  return { activeAlbum: state.activeAlbumReducer.item }
+}
 
 export default connect(mapStoreToProps)(AlbumDetails);

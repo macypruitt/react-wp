@@ -14,44 +14,35 @@ import {connect} from 'react-redux';
         })
     }
   
-  
-
     render(){
 
-      console.log(albums)
-      let albumsArray;
+      return (
+        <div className="discog-container">
+            
+            <div className="discog-albums">
+                <br/>
 
-      if(albums){
+                { albums.map((item, index) => {
+                    return (
+                        <div className="album-container" key={index}>
+                        
+                            <img className="album-img" data={item}
+                                src={item.imageUrl}
+                                onClick={(event)=>this.clickAlbum(event, item)}>
+                            </img>
 
-          albumsArray = albums.map((item, index) => {
-              return (
-                  
-                  <div className="album-container" key={index}>
-                  
-                      <img className="album-img" data={item}
-                        src={item.imageUrl}
-                        onClick={(event)=>this.clickAlbum(event, item)}></img>
-
-                      <br></br>
-                      {item.name}
-                      <br></br>
-                      
-                  </div>
-              )
-
-          })
-      }
-
-    return (
-      <div className="discog-container">
+                            <br/>
+                                {item.name}
+                            <br/>
+                            
+                        </div>
+                    )
+                }) 
+                }
           
-          <div className="discog-albums">
-         <br/>
-         {albumsArray}
-         
-     </div>
-      </div>
-    
+            </div>
+        </div>
+      
     )
   }
 }

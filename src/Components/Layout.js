@@ -22,8 +22,6 @@ class Layout extends Component {
     render(){
 
         let leftSideContent = <Blog/>
-        console.log('redddduz', this.props.store.activeAlbumReducer)
-
 
         if(this.props.store.activeAlbumReducer.view != 'blog'){
           leftSideContent = <AlbumDetails/>
